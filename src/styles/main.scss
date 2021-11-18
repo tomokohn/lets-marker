@@ -16,21 +16,87 @@ body {
 .page-wrapper {
   height: 100%;
   .top-section {
-    min-height: 33%;
+    min-height: 45%;
     display: flex;
     justify-content: space-around;
     background: #f7141f;
+    position: relative;
+
     
 
     div {
-      border: 1px solid black;
       flex: 1;
+    }
+
+    .top-right {
+      background-image: url(../images/header-images/notebook_right.png);
+      background-position: right top;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+
+      .note-paper-one {
+        background-image: url(../images/header-images/note_1.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: contain;
+        flex: 1;
+      }
+      .pencil-one {
+        background-image: url(../images/header-images/pencil.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        flex: 1;
+      }
+
+    }
+
+    .top-left {
+      background-image: url(../images/header-images/notebook_left.png);
+      background-position: left top;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      
+      .lock {
+        background-image: url(../images/header-images/note_lock.png);
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        flex: 2;
+      }
+
+      .pancil-two {
+        background-image: url(../images/header-images/pencil_2.png);
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        flex: 1;
+      }
+
+      .note-paper-two {
+        background-image: url(../images/header-images/note_2.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        flex: 2;
+      }
+
     }
 
     main {
       height: 100%;
     }
+    
   }
+  // .top-section::after {
+  //   content: "";
+  //   position: absolute;
+  //   right: 0;
+  //   top: 0;
+  //   height: auto;
+  //   background-image: url(../images/header-images/notebook_right.png);
+  // }
 
   
 }
