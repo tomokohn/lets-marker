@@ -1,5 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
 body {
-  background: #EEE;
+  height: 100%;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
+}
+
+.page-wrapper {
+  height: 100%;
+  .top-section {
+    min-height: 33%;
+    display: flex;
+    justify-content: space-around;
+    background: #f7141f;
+    
+
+    div {
+      border: 1px solid black;
+      flex: 1;
+    }
+
+    main {
+      height: 100%;
+    }
+  }
+
+  
 }

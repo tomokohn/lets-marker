@@ -2,7 +2,7 @@
  * Import this module's styles
  */
 
-import './myModule.scss';
+// import './myModule.scss';
 
 
 /**
