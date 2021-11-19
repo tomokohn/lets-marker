@@ -1,4 +1,8 @@
 
+@font-face {
+  font-family: 'OpenSansHebrew-Bold';
+  src: url('../fonts/OpenSansHebrew-Bold.ttf') format('truetype'),
+}
 
 * {
   margin: 0;
@@ -13,6 +17,18 @@ body {
   height: 100%;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
+
+  main {
+    margin-top: 90px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    p {
+      width: 300px;
+      text-align: right;
+    }
+  }
 }
 
 .page-wrapper {
@@ -24,18 +40,13 @@ body {
     background: #f7141f;
     position: relative;
 
-    
-
-    div {
-      flex: 1;
-    }
-
     .top-right {
       background-image: url(../images/header-images/notebook_right.png);
       background-position: right top;
       background-repeat: no-repeat;
       display: flex;
       flex-direction: column;
+      flex: 1;
 
       .note-paper-one {
         background-image: url(../images/header-images/note_1.png);
@@ -54,10 +65,31 @@ body {
     }
 
     .top-center {
-      display: flex;
-      justify-content: center;
-      align-items: top;
       margin-top: 20px;
+      flex: 1;
+      .container-svg {
+        position: relative;
+        .artboard-one {
+          position: absolute;
+          top: 45%;
+          right: 10%;
+          background: url(../images/header-images/Artboard_1.png);
+          width: 150px;
+          height: 150px;
+          transform: scale(0.8);
+        }
+  
+        .artboard-two {
+          position: absolute;
+          top: 60%;
+          left: 38%;
+          background: url(../images/header-images/Artboard_2.png);
+          width: 84px;
+          height: 72px;
+          transform: scale(0.8);
+  
+        }
+      }  
     }
 
     .top-left {
@@ -66,6 +98,7 @@ body {
       background-repeat: no-repeat;
       display: flex;
       flex-direction: column;
+      flex: 1;
       
       .lock {
         background-image: url(../images/header-images/note_lock.png);
@@ -92,24 +125,54 @@ body {
       }
 
     }
-
-    main {
-      height: 100%;
+    @media screen and (max-width: 390px) {
+      .top-right, .top-left {
+        display: none;
+        
     }
+  }
     
   }
-
+  
   
 }
 
-svg {
+@keyframes marker {
+  from {clip-path: inset(0 0 0 100%)}
+  to {clip-path: inset(0 0 0 0)}
+}
+
+svg#Layer_1 {
+
+    #marker-one {
+      animation-name: marker;
+      animation-duration: 3s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1;
+      opacity: 0.8;
+    }
+
+    #marker-two {
+      animation-name: marker;
+      animation-duration: 3s ;
+      animation-timing-function: ease-in-out;
+      animation-delay: 3s;
+      animation-iteration-count: 1;
+      opacity: 0.8;
+    }
+    
+  
   #svg-text-top {
-    font-size: 30px;
+    font-family: 'OpenSansHebrew-Bold', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
     color: #000
   }
 
   #svg-text-bottom {
-    font-size: 30px;
+    font-family: 'OpenSansHebrew-Bold', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
     color: #000
   }
 

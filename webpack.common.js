@@ -59,7 +59,8 @@ module.exports = {
         use: {
             loader: 'svg-url-loader'
         }
-    }
+    }, 
+    { test: /\.(ttf)$/, use: ['url-loader?limit=100000'] }
     ]
   }
 };
