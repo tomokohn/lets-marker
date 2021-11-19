@@ -42,7 +42,7 @@ body {
 
     .top-right {
       background-image: url(../images/header-images/notebook_right.png);
-      background-position: right top;
+      background-position: 110% top;
       background-repeat: no-repeat;
       display: flex;
       flex-direction: column;
@@ -125,12 +125,37 @@ body {
       }
 
     }
-    @media screen and (max-width: 390px) {
-      .top-right, .top-left {
-        display: none;
-        
+    @media screen and (max-width: 415px) {
+       min-height: 100%;
+       flex-direction: column;
+       order: 1;
+
+
+
+      .top-right {
+        order: 2;
+        background-image: none;
+        .note-paper-one {
+          background-position: right center;
+        }
+         .pencil-one, .empty-for-center {
+           background-image: none;
+           display: none;
+         }
+      }
+
+      .top-center {
+        flex: initial;
+      }
+
+      .top-left {
+        order: 3;
+        background-image: none;
+        .lock, .pancil-two {
+          display: none;
+        }
+      }
     }
-  }
     
   }
   
