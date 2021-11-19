@@ -15,9 +15,9 @@ externalModule.greet();
 import Notebook from './images/header-svg/notebook.svg'
 
 
-const loadSvgNote = () => {
-    const SVG = `<object  data="${Notebook}" type="image/svg+xml"></object>`
-    document.querySelector('.container-svg').innerHTML = (SVG);
-}
+// const loadSvgNote = () => {
+//     const SVG = `<object  data="${Notebook}" type="image/svg+xml"></object>`
+//     document.querySelector('.container-svg').innerHTML = (SVG);
+// }
 
-document.addEventListener('DOMContentLoaded', loadSvgNote())
+// document.addEventListener('DOMContentLoaded', loadSvgNote())

@@ -1,3 +1,5 @@
+
+
 * {
   margin: 0;
   padding: 0;
@@ -51,6 +53,13 @@ body {
 
     }
 
+    .top-center {
+      display: flex;
+      justify-content: center;
+      align-items: top;
+      margin-top: 20px;
+    }
+
     .top-left {
       background-image: url(../images/header-images/notebook_left.png);
       background-position: left top;
@@ -89,14 +98,19 @@ body {
     }
     
   }
-  // .top-section::after {
-  //   content: "";
-  //   position: absolute;
-  //   right: 0;
-  //   top: 0;
-  //   height: auto;
-  //   background-image: url(../images/header-images/notebook_right.png);
-  // }
 
   
 }
+
+svg {
+  #svg-text-top {
+    font-size: 30px;
+    color: #000
+  }
+
+  #svg-text-bottom {
+    font-size: 30px;
+    color: #000
+  }
+
+} 
