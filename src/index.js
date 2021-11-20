@@ -12,12 +12,26 @@ externalModule.greet();
 
 // my code to refactor: 
 
-import Notebook from './images/header-svg/notebook.svg'
+let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 1.0
+  }
+ 
 
+const intersectCallBack = (entries, observer) => {
+    entries.forEach(entry => {
+        if(!entry.isIntersecting) return;
+        entry.target.classList.toggle('mark');
+    });
+};
+    
+  
+const bootstrapDom = () => {
+    console.log('bootstrapDom');
+    let target = document.querySelector('#Layer_1');
+    let observer = new IntersectionObserver(intersectCallBack, options);
+    observer.observe(target);
+}
 
-// const loadSvgNote = () => {
-//     const SVG = `<object  data="${Notebook}" type="image/svg+xml"></object>`
-//     document.querySelector('.container-svg').innerHTML = (SVG);
-// }
-
-// document.addEventListener('DOMContentLoaded', loadSvgNote())
+document.addEventListener('DOMContentLoaded', bootstrapDom())
