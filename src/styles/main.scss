@@ -47,6 +47,9 @@ body {
       display: flex;
       flex-direction: column;
       flex: 1;
+      @media screen and (min-width: 426px) and (max-width: 810px)   {
+        transform: translateX(30px);
+      }
 
       .note-paper-one {
         margin-top: 10px;
@@ -55,6 +58,16 @@ body {
         background-position: left center;
         background-size: contain;
         flex: 1;
+        @media screen and (min-width: 1020px)   {
+          background-position: center center;
+          
+        }
+  
+        @media screen and (min-width: 1280px)   {
+          .lock {
+            background-position: center center;
+          }
+        }
       }
       .pencil-one {
         background-image: url(../images/header-images/pencil.png);
@@ -111,6 +124,9 @@ body {
       display: flex;
       flex-direction: column;
       flex: 1;
+      @media screen and (min-width: 426px) and (max-width: 1020px)  {
+        background-size: contain;
+      }
       
       .lock {
         margin-top: 60px;
@@ -136,6 +152,20 @@ body {
         background-size: contain;
         flex: 2;
       }
+
+      @media screen and (min-width: 426px) and (max-width: 810px)   {
+        background-position: right top;
+        .lock {
+          background-position: center center;
+        }
+      }
+
+      @media screen and (min-width: 1280px)   {
+        .lock {
+          background-position: center center;
+        }
+      }
+      
 
     }
     @media screen and (max-width: 425px) {
