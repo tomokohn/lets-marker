@@ -1,13 +1,13 @@
 {
   "name": "webpack-boilerplate",
   "version": "0.0.1",
-  "description": "Webpack Boilerplate",
+  "description": "Haaretz test",
   "main": "webpack.common.js",
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
-  "author": "Nahuel José",
+  "author": "Nahuel José > Tomer Kohn",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.5.1",
