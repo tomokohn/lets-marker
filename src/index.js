@@ -1,18 +1,6 @@
-/**
- * Import your modules and use them!
- */
-import { externalModule } from './js/myModule';
-
-/**
- * Import your styles!
- */
 import './styles/main.scss';
 
-externalModule.greet();
-
-// my code to refactor: 
-
-let options = {
+const options = {
     root: null,
     rootMargin: '0px',
     threshold: 1.0
@@ -25,10 +13,20 @@ const intersectCallBack = (entries, observer) => {
         entry.target.classList.toggle('mark');
     });
 };
+
+const addTexts = (textOne, textTwo) => {
+    const textElm = document.querySelector('svg.text');
+    const lineOneContent = document.createTextNode(textOne);
+    const lineTwoContent = document.createTextNode(textTwo);
+    const lineOne = document.createElement('text').setAttribute('x',"250");
+    const lineTwo = document.createElement('text');
+    lineOne.appendChild(lineOneContent);
+    lineTwo.appendChild(lineTwoContent);
+    textElm.appendChild(lineOne);
+}
     
   
 const bootstrapDom = () => {
-    console.log('bootstrapDom');
     let target = document.querySelector('#Layer_1');
     let observer = new IntersectionObserver(intersectCallBack, options);
     observer.observe(target);

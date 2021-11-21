@@ -1,13 +1,4 @@
-
-@font-face {
-  font-family: 'OpenSansHebrew-Bold';
-  src: url('../fonts/OpenSansHebrew-Bold.ttf') format('truetype'),
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
+@import 'config';
 
 html {
   height: 100%;
@@ -126,7 +117,7 @@ body {
       }
 
     }
-    @media screen and (max-width: 415px) {
+    @media screen and (max-width: 425px) {
        min-height: 100%;
        flex-direction: column;
        order: 1;
@@ -191,18 +182,9 @@ svg#Layer_1 {
   #marker-one, #marker-two {
     opacity: 0.8;
   }
-  #svg-text-top {
-    font-family: 'OpenSansHebrew-Bold', Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 50px;
+  #svg-text-top, #svg-text-bottom {
+    font-family: 'OpenSansHebrew',sans-serif;
+    font-size: 70px;
     color: #000
   }
-
-  #svg-text-bottom {
-    font-family: 'OpenSansHebrew-Bold', Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 50px;
-    color: #000
-  }
-
 } 

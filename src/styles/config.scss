@@ -1,0 +1,19 @@
+// Color Variables
+$base-text-color: #000000;
+
+// Custom Fonts
+  @font-face {
+    font-family: 'OpenSansHebrew';
+    src: url('../fonts/OpenSansHebrew-Regular.ttf') format('truetype'),
+  }
+
+  @font-face {
+    font-family: 'OpenSansHebrew-Bold';
+    src: url('../fonts/OpenSansHebrew-Bold.ttf') format('truetype'),
+  }
+
+  // Override browser defaults
+  * {
+    margin: 0;
+    padding: 0;
+  }
