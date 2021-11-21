@@ -1,0 +1,37 @@
+@keyframes marker {
+    from {clip-path: inset(0 0 0 100%)}
+    to {clip-path: inset(0 0 0 0)}
+  }
+  @keyframes marker-two {
+    from {clip-path: inset(0 0 0 100%);}
+    to {clip-path: inset(0 0 0 0)}
+  }
+  
+  
+  svg#Layer_1.mark {
+  
+      #marker-one {
+        animation-name: marker;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+      }
+  
+      #marker-two {
+        animation-name: marker;
+        animation-duration: 1s ;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+      }
+    }
+  svg#Layer_1 {
+  
+    #marker-one, #marker-two {
+      opacity: 0.8;
+    }
+    #svg-text-top, #svg-text-bottom {
+      font-family: 'OpenSansHebrew',sans-serif;
+      font-size: 70px;
+      color: #000
+    }
+  } 

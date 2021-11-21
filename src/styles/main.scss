@@ -1,4 +1,5 @@
-@import 'config';
+@import 'config', 'svg_interactive';
+
 
 html {
   height: 100%;
@@ -6,7 +7,6 @@ html {
 
 body {
   height: 100%;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
 
   main {
@@ -16,8 +16,17 @@ body {
     justify-content: center;
 
     p {
-      width: 300px;
+      direction: rtl;
+      min-width: 300px;
+      width: calc(100vw / 3);
       text-align: right;
+      font-family: 'OpenSansHebrew',sans-serif;
+      line-height: 1.4;
+
+      span {
+        display: inline-block;
+        margin: 30px 0;
+      }
     }
   }
 }
@@ -50,8 +59,11 @@ body {
       .pencil-one {
         background-image: url(../images/header-images/pencil.png);
         background-repeat: no-repeat;
-        background-size: auto;
+        background-size: contain;
         flex: 1;
+        @media screen and (min-width: 1020px)  {
+          background-size: auto;
+        }
       }
 
     }
@@ -68,6 +80,11 @@ body {
           width: 150px;
           height: 150px;
           transform: scale(0.8);
+          @media screen and (min-width: 426px) and (max-width: 1020px) {
+            top: 35%;
+            right: 0%;
+            transform: scale(0.3);
+          }
         }
   
         .artboard-two {
@@ -78,7 +95,11 @@ body {
           width: 84px;
           height: 72px;
           transform: scale(0.8);
-  
+          @media screen and (min-width: 426px) and (max-width: 810px)   {
+            top: 55%;
+            left: 32%;
+            transform: scale(0.5);
+          }
         }
       }  
     }
@@ -147,44 +168,4 @@ body {
       }
     }
   }
-  
-  
 }
-
-@keyframes marker {
-  from {clip-path: inset(0 0 0 100%)}
-  to {clip-path: inset(0 0 0 0)}
-}
-@keyframes marker-two {
-  from {clip-path: inset(0 0 0 100%);}
-  to {clip-path: inset(0 0 0 0)}
-}
-
-
-svg#Layer_1.mark {
-
-    #marker-one {
-      animation-name: marker;
-      animation-duration: 1s;
-      animation-timing-function: ease-in-out;
-      animation-iteration-count: 1;
-    }
-
-    #marker-two {
-      animation-name: marker;
-      animation-duration: 1s ;
-      animation-timing-function: ease-in-out;
-      animation-iteration-count: 1;
-    }
-  }
-svg#Layer_1 {
-
-  #marker-one, #marker-two {
-    opacity: 0.8;
-  }
-  #svg-text-top, #svg-text-bottom {
-    font-family: 'OpenSansHebrew',sans-serif;
-    font-size: 70px;
-    color: #000
-  }
-} 
